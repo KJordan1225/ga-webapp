@@ -351,37 +351,7 @@
 									<div class="wt-description">
 										<p>EmpowerHer Market: Your Destination for Local Black Women-Owned Excellence!</p>
 									</div>
-								</div>
-								<!-- <form class="wt-formtheme wt-formbanner" 
-									ib="searchform" action="{{ route('search.do') }}" 
-									method="POST">
-									@csrf
-									<fieldset>
-										<div class="form-group">
-											<input type="text" name="fullname" class="form-control" placeholder="I’m looking for">
-											<div class="wt-formoptions">
-												<div class="wt-dropdown">
-													<span>In: <em class="selected-search-type">Freelancers </em><i class="lnr lnr-chevron-down"></i></span>
-												</div>
-												<div class="wt-radioholder">
-													<span class="wt-radio">
-														<input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked="checked">
-														<label for="wt-freelancers">Freelancers</label>
-													</span>
-													<span class="wt-radio">
-														<input id="wt-jobs"  data-title="Jobs" type="radio" name="searchtype" value="job">
-														<label for="wt-jobs">Jobs</label>
-													</span>
-													<span class="wt-radio">
-														<input id="wt-company"  data-title="Services" type="radio" name="searchtype" value="services">														
-														<label for="wt-company">Services</label>
-													</span>
-												</div>
-												<button type="submit" name="search" class="wt-searchbtn" id="searchbtn">Search</button>
-											</div>
-										</div>
-									</fieldset>
-								</form>	-->
+								</div>								
 								<div class="wt-videoholder">
 									<div class="wt-videoshow">
 										<a data-rel="prettyPhoto[video]" href="https://www.youtube.com/watch?v=J37W6DjqT3Q"><i class="fa fa-play"></i></a>
