@@ -1325,7 +1325,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 /* Banner Style */
 .wt-bannerholder{
-	background-image: url(../images/bannerimg/banner-img.jpg);
+	background-image: url(../images/custom-banner/bckgrd-img.png);
 	background-size:cover;
     background-repeat: no-repeat;
     position: relative;
@@ -1799,7 +1799,7 @@ body.wt-login .wt-userlogedin{display: block;}
 /* Artcle Banner Style */
 .wt-innerbannerholder{
 	height: 300px;
-	background-image: url(../images/bannerimg/img-02.jpg);
+	background-image: url(../images/custom-banner/bckgrd-img.png);
 	background-size: cover;
     background-repeat: no-repeat;
 	display: -webkit-box;

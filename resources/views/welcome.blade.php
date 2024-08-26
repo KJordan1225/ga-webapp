@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EmpowerHer Market</title>
+	<title>Gamma Alpha chapter</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -49,7 +49,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<!-- <strong class="wt-logo"><a href="index-2.html"><img src="{{asset('assets/images/logo.png') }}" alt="company logo here"></a></strong> -->
-								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>EmpowerHer Market</h4></a></strong>
+								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>Gamma Alpha chapter Omega Psi Phi, Fraternity</h4></a></strong>
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -336,7 +336,7 @@
 						<div class="col-12 col-sm-12 col-md-12 col-lg-5">
 							<div class="wt-bannerimages">
 								<figure class="wt-bannermanimg" data-tilt>
-									<img src="{{asset('assets/images/custom/hero-banner/frontpage-banner1.jpg') }}" style="height:300px;" alt="img description">
+									<img src="{{asset('assets/images/custom/hero-banner/omega-shield-1.png') }}" style="height:300px;" alt="img description">
 									<!-- <img src="{{asset('assets/images/bannerimg/img-02.png') }}" class="wt-bannermanimgone" alt="img description">
 									<img src="{{asset('assets/images/bannerimg/img-03.png') }}" class="wt-bannermanimgtwo" alt="img description"> -->
 								</figure>
@@ -346,20 +346,12 @@
 							<div class="wt-bannercontent">
 								<div class="wt-bannerhead">
 									<div class="wt-title">
-										<h1>Hire expert local black female freelancers for any job, Online</h1>
+										<h1 style="color: #CFB53B">Gamma Alpha Chapter of Omega Psi Phi Fraternity, Inc.</h1>
 									</div>
 									<div class="wt-description">
-										<p>EmpowerHer Market: Your Destination for Local Black Women-Owned Excellence!</p>
+										<p>Gamma Alpha: Pride of the Roanoke Valley!</p>
 									</div>
-								</div>								
-								<div class="wt-videoholder">
-									<div class="wt-videoshow">
-										<a data-rel="prettyPhoto[video]" href="https://www.youtube.com/watch?v=J37W6DjqT3Q"><i class="fa fa-play"></i></a>
-									</div>
-									<div class="wt-videocontent">
-										<span>See For Yourself!<em>How it works &amp; experience the ultimate joy.</em></span>
-									</div>
-								</div>
+								</div>	
 							</div>
 						</div>
 					</div>
