@@ -61,69 +61,46 @@
 													<a href="javascript:void(0);">Main</a>
 													<ul class="sub-menu">
 														<li class="menu-item-has-children page_item_has_children wt-notificationicon"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Home</a>
-															<ul class="sub-menu">
-																<li><a href="index-2.html">Home v1</a></li>
-																<li class="wt-newnoti"><a href="indexvtwo.html">Home v2<em>without login</em></a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Article</a>
-															<ul class="sub-menu">
-																<li><a href="articlelist.html">Article List</a></li>
-																<li><a href="articlegrid.html">Article Grid</a></li>
-																<li><a href="articlesingle.html">Article Single</a></li>
-																<li><a href="articleclassic.html">Article Classic</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Company</a>
-															<ul class="sub-menu">
-																<li><a href="companygrid.html">Company Grid</a></li>
-																<li><a href="companysigle.html">Company Sigle</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="about.html">About</a>
-														</li>
-														<li>
-															<a href="privacypolicy.html">Privacy Policy</a>
-														</li>
-														<li>
-															<a href="comingsoon.html">Coming Soon</a>
-														</li>
-														<li>
-															<a href="404page.html">404page</a>
+															<a href="{{ url('/home') }}">Home</a>															
 														</li>
 													</ul>
 												</li>
 												<li class="nav-item">
-													<a href="howitworks.html">How It Works</a>
+													<a href="javascript:void(0);">About GA</a>
 												</li>
 												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">Browse Jobs</a>
+													<a href="javascript:void(0);">Mandated Programs</a>
 													<ul class="sub-menu">
 														<li>
-															<a href="joblisting.html">Job Listing</a>
+															<a href="javascript:void(0);">Achievement Week</a>
 														</li>
 														<li class="current-menu-item">
-															<a href="jobsingle.html">Job Single</a>
+															<a href="javascript:void(0);">Talent Hunt</a>Talent Hunt</a>
 														</li>
 														<li>
-															<a href="jobproposal.html">Job Proposal</a>
+															<a href="javascript:void(0);">Omega STEM Program</a>
+														</li>
+                                                        <li>
+															<a href="javascript:void(0);">Fatherhood & Mentoring</a>
+														</li>
+                                                        <li>
+															<a href="javascript:void(0);">Social Action</a>
 														</li>
 													</ul>
 												</li>
 												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">View Freelancers</a>
+													<a href="javascript:void(0);">Events</a>
 													<ul class="sub-menu">
 														<li>
-															<a href="userlisting.html">User Listing</a>
-														</li>
-														<li class="current-menu-item">
-															<a href="usersingle.html">User Single</a>
+															<a href="javascript:void(0);">Calendar</a>
 														</li>
 													</ul>
+												</li>
+                                                <li class="menu-item-has-children page_item_has_children">
+													<a href="javascript:void(0);">Scholarships</a>													
+												</li>
+                                                <li class="menu-item-has-children page_item_has_children">
+													<a href="javascript:void(0);">Contact GA</a>													
 												</li>
 											</ul>
 										</div>
@@ -185,7 +162,7 @@
 											<img src="{{asset('assets/images/user-img.jpg') }}" alt="image description">
 										</figure>
 										<div class="wt-username">
-											<h3>Louanne Mattioli</h3>
+											<h3>{{ auth()->user()->name }}</h3>
 										</div>
 										@else
 										<div class="wt-username">
@@ -202,85 +179,52 @@
 											@if (Route::has('login'))
 												<!-- <nav class="-mx-3 flex flex-1 justify-end"> -->
 													@auth
+                                                        @if (true == (auth()->user()->hasRole('Admin')))												<li>
 														<li>
-														<a
-															href="{{ url('/home') }}"
-															class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-														>
-															Dashboard
-														</a>
-														</li>														
-														<li>
-															<a href="dashboard-profile.html">
-																<span>My Profile</span>
-															</a>
+                                                            <span>{{ auth()->user()->hasRole('Admin') }}</span>
+                                                            <a
+                                                                href="{{ url('/admin') }}"
+                                                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                                            >
+                                                                Admin Dashboard
+                                                            </a>                                                        
 														</li>
-														<li class="menu-item-has-children">
-															<a href="javascript:void(0);">
-																<span>All Jobs</span>
-															</a>
-															<ul class="sub-menu">
-																<li><a href="dashboard-completejobs.html">Completed Jobs</a></li>
-																<li><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
-																<li><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
-																<li><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="dashboard-managejobs.html">
-																<span>Manage Jobs</span>
-															</a>
-														</li>
-														<li class="wt-notificationicon menu-item-has-children">
-															<a href="javascript:void(0);">
-																<span>Messages</span>
-															</a>
-															<ul class="sub-menu">
-																<li><a href="dashboard-messages.html">Messages</a></li>
-																<li><a href="dashboard-messages2.html">Messages V 2</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="dashboard-saveitems.html">
-																<span>My Saved Items</span>
-															</a>
-														</li>
-														<li>
-															<a href="dashboard-invocies.html">
-																<span>Invoices</span>
-															</a>
-														</li>
-														<li>
-															<a href="dashboard-category.html">
-																<span>Category</span>
-															</a>
-														</li>
-														<li>
-															<a href="dashboard-packages.html">
-																<span>Packages</span>
-															</a>
-														</li>
-														<li>
-															<a href="dashboard-proposals.html">
-																<span>Proposals</span>
-															</a>
-														</li>
+                                                        @elseif (true !== (auth()->user()->hasRole('Admin')))
+                                                        <li class="menu-item-has-children">
+                                                            <a href="javascript:void(0);">My Profile</a>
+                                                            <ul class="sub-menu">
+                                                                <li><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
+                                                                    @if(null == (auth()->user()->profile))
+                                                                        <ul>
+                                                                            <li><a href="javascript:void(0);">Create Profile</a></li>					
+                                                                        </ul>
+                                                                    @else
+                                                                        <ul class="sub-menu">
+                                                                            <li class="wt-newnoti"><a href="javascript:void(0);">View Profile</a></li>
+                                                                            <li class="wt-newnoti"><a href="javascript:void(0);">Edit Profile</a></li>
+                                                                        </ul>
+                                                                    @endif
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                        </li>
 														<li>
 															<a href="dashboard-accountsettings.html">
 																<span>Account Settings</span>
 															</a>
 														</li>
-														<li>
-															<a href="dashboard-helpsupport.html">
-																<span>Help &amp; Support</span>
-															</a>
+														@endif
+                                                        <li>
+                                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                                onclick="event.preventDefault();
+                                                                                document.getElementById('logout-form').submit();">
+                                                                    {{ __('Logout') }}
+                                                            </a>
+
+                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                                @csrf
+                                                            </form>
 														</li>
-														<li>
-															<a href="index-2.html">
-																<span>Logout</span>
-															</a>
-														</li>
-														
 													@else
 														<li>
 														<a
@@ -304,9 +248,6 @@
 													@endauth
 												<!-- </nav> -->
 											@endif
-
-
-
 												
 											</ul>
 										</nav>
