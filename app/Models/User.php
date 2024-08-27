@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Authenticatable implements FilamentUser
 {
@@ -51,5 +52,13 @@ class User extends Authenticatable implements FilamentUser
     public function canAccessPanel(Panel $panel): bool
     {
         return 	$this->hasRole('Admin');
+    }
+
+    /**
+     * Get the profile associated with the user.
+     */
+    public function profile():HasOne
+    {
+        return $this->hasOne(Profile::class);
     }
 }

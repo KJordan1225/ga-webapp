@@ -186,7 +186,6 @@
 										</figure>
 										<div class="wt-username">
 											<h3>Louanne Mattioli</h3>
-											<span>Amento Tech</span>
 										</div>
 										@else
 										<div class="wt-username">
@@ -210,17 +209,7 @@
 														>
 															Dashboard
 														</a>
-														</li>
-
-														<li class="menu-item-has-children page_item_has_children">
-															<a href="javascript:void(0);">
-																<span>Insights</span>
-															</a>
-															<ul class="sub-menu children">
-																<li><a href="dashboard-insights.html">Insights</a></li>
-																<li><a href="dashboard-insightsuser.html">Insights User</a></li>
-															</ul>
-														</li>
+														</li>														
 														<li>
 															<a href="dashboard-profile.html">
 																<span>My Profile</span>
