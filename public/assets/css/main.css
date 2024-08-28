@@ -5126,4 +5126,21 @@ body.wt-login .wt-userlogedin{display: block;}
 		content: "Loading...";
 	}
 }
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-text-container img {
+    margin-right: 20px;
+    max-width: 150px; /* Adjust the image width as needed */
+    height: auto;
+}
+
+.image-text-container p {
+    flex: 1;
+    margin: 0;
+}
+
 [v-cloak] { display:none; }

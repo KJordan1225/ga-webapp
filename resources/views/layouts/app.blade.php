@@ -100,19 +100,19 @@
 													<a href="javascript:void(0);">Mandated Programs</a>
 													<ul class="sub-menu">
 														<li>
-															<a href="javascript:void(0);">Achievement Week</a>
+															<a href="{{ route('achievementWeek') }}">Achievement Week</a>
 														</li>
 														<li class="current-menu-item">
-															<a href="javascript:void(0);">Talent Hunt</a>
+															<a href="{{ route('talentHunt') }}">Talent Hunt</a>
 														</li>
 														<li>
-															<a href="javascript:void(0);">Omega STEM Program</a>
+															<a href="{{ route('stemProgram') }}">Omega STEM Program</a>
 														</li>
                                                         <li>
-															<a href="javascript:void(0);">Fatherhood & Mentoring</a>
+															<a href="{{ route('fatherhoodMentoring') }}">Fatherhood & Mentoring</a>
 														</li>
                                                         <li>
-															<a href="javascript:void(0);">Social Action</a>
+															<a href="{{ route('socialAction') }}">Social Action</a>
 														</li>
 													</ul>
 												</li>

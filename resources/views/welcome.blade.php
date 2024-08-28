@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="{{asset('assets/css/color.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/transitions.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" href="{{asset('assets/css/custome/founders.css') }}">
 	<script src="{{asset('assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 </head>
 <body class="wt-login">
@@ -66,8 +67,15 @@
 													</ul>
 												</li>
 												<li class="nav-item">
-													<a href="javascript:void(0);">About GA</a>
+													<a href="javascript:void(0);">About GA</a>												
+													<ul class="sub-menu">
+														<li>
+															<a href="{{ route('aboutgaFounders') }}">founders</a>
+														</li>
+													</ul>
 												</li>
+												
+
 												<li class="menu-item-has-children page_item_has_children">
 													<a href="javascript:void(0);">Mandated Programs</a>
 													<ul class="sub-menu">

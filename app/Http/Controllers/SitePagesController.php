@@ -35,4 +35,10 @@ class SitePagesController extends Controller
         return view('site_pages.mandated_programs.social_action');
 
     }
+
+    public function aboutgaFounders() {
+
+        return view('site_pages.about_ga.founders');
+
+    }
 }
