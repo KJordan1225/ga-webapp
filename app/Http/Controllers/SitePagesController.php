@@ -29,4 +29,10 @@ class SitePagesController extends Controller
         return view('site_pages.mandated_programs.fatherhood_mentoring');
 
     }
+
+    public function socialAction() {
+
+        return view('site_pages.mandated_programs.social_action');
+
+    }
 }
