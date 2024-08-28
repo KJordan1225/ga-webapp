@@ -72,7 +72,7 @@
 													<a href="javascript:void(0);">Mandated Programs</a>
 													<ul class="sub-menu">
 														<li>
-															<a href="javascript:void(0);">Achievement Week</a>
+															<a href="{{ route('achievementWeek') }}">Achievement Week</a>
 														</li>
 														<li class="current-menu-item">
 															<a href="javascript:void(0);">Talent Hunt</a>Talent Hunt</a>
