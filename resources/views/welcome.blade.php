@@ -44,13 +44,15 @@
 		<!-- Content Wrapper Start -->
 		<div class="wt-contentwrapper">
 			<!-- Header Start -->
+			
 			<header id="wt-header" class="wt-header wt-haslayout">
 				<div class="wt-navigationarea">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<!-- <strong class="wt-logo"><a href="index-2.html"><img src="{{asset('assets/images/logo.png') }}" alt="company logo here"></a></strong> -->
-								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>Gamma Alpha chapter Omega Psi Phi, Fraternity</h4></a></strong>
+								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>Gamma Alpha chapter Omega Psi Phi Fraternity, Inc.</h4></a></strong>
+															
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

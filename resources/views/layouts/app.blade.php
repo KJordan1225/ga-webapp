@@ -50,34 +50,8 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<!-- <strong class="wt-logo"><a href="index-2.html"><img src="images/logo.png" alt="company logo here"></a></strong> -->
-								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>Gamma Alpha Chapter of Omega Psi Phi Fraternity,</h4></a></strong>
-                                <!-- <form class="wt-formtheme wt-formbanner wt-formbannervtwo">
-									<fieldset>
-										<div class="form-group">
-											<input type="text" name="job" class="form-control" placeholder="I’m looking for">
-											<div class="wt-formoptions">
-												<div class="wt-dropdown">
-													<span>In: <em class="selected-search-type">Freelancers </em><i class="lnr lnr-chevron-down"></i></span>
-												</div>
-												<div class="wt-radioholder">
-													<span class="wt-radio">
-														<input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked="">
-														<label for="wt-freelancers">Freelancers</label>
-													</span>
-													<span class="wt-radio">
-														<input id="wt-jobs" data-title="Jobs" type="radio" name="searchtype" value="job">
-														<label for="wt-jobs">Jobs</label>
-													</span>
-													<span class="wt-radio">
-														<input id="wt-companies" data-title="Companies" type="radio" name="searchtype" value="job">
-														<label for="wt-companies">Companies</label>
-													</span>
-												</div>
-												<a href="javascrip:void(0);" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
-											</div>
-										</div>
-									</fieldset>
-								</form> -->
+								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>Gamma Alpha Chapter of Omega Psi Phi Fraternity, Inc.</h4></a></strong>
+                               
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +68,12 @@
 													</ul>
 												</li>
 												<li class="nav-item">
-													<a href="javascript:void(0);">About GA</a>
+													<a href="javascript:void(0);">About GA</a>												
+													<ul class="sub-menu">
+														<li>
+															<a href="{{ route('aboutgaFounders') }}">founders</a>
+														</li>
+													</ul>
 												</li>
 												<li class="menu-item-has-children page_item_has_children">
 													<a href="javascript:void(0);">Mandated Programs</a>
@@ -340,7 +319,12 @@
 					<div class="row justify-content-md-center">
 						<div class="col-xs-12 col-sm-12 col-md-8 push-md-2 col-lg-6 push-lg-3">
 							<div class="wt-innerbannercontent">
-							<div class="wt-title"><h2 style="color: #CFB53B">Gamma Alpha Chapter</h2></div>
+							@if (isset($pageTitle))
+								<div class="wt-title"><h2 style="color: #CFB53B">{{ $pageTitle }}</h2></div>
+							@endif
+							@if (isset($breadCrumbs))
+								<div class="wt-title"><h5 style="color: #CFB53B">{{ $breadCrumbs }}</h5></div>
+							@endif
 							<!-- <ol class="wt-breadcrumb">
 								<li><a href="index-2.html">Home</a></li>
 								<li class="wt-active">Articles</li>

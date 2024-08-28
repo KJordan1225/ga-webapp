@@ -8,37 +8,49 @@ class SitePagesController extends Controller
 {
     public function achievementWeek() {
 
-        return view('site_pages.mandated_programs.achievement_week');
+        $pageTitle = "Achievement Week";
+        $breadCrumbs = "Mandated Programs/Achievement Week";
+        return view('site_pages.mandated_programs.achievement_week', compact('pageTitle', 'breadCrumbs'));
 
     }
 
     public function talentHunt() {
 
-        return view('site_pages.mandated_programs.talent_hunt');
+        $pageTitle = "Talent Hunt";
+        $breadCrumbs = "Mandated Programs/Talent Hunt";
+        return view('site_pages.mandated_programs.talent_hunt', compact('pageTitle', 'breadCrumbs'));
 
     }
 
     public function stemProgram() {
 
-        return view('site_pages.mandated_programs.stem_program');
+        $pageTitle = "STEM Program";
+        $breadCrumbs = "Mandated Programs/Omega STEM Program";
+        return view('site_pages.mandated_programs.stem_program', compact('pageTitle', 'breadCrumbs'));
 
     }
 
     public function fatherhoodMentoring() {
 
-        return view('site_pages.mandated_programs.fatherhood_mentoring');
+        $pageTitle = "Fatherhood & Mentoring";
+        $breadCrumbs = "Mandated Programs/Fatherhood & Mentoring";
+        return view('site_pages.mandated_programs.fatherhood_mentoring', compact('pageTitle', 'breadCrumbs'));
 
     }
 
     public function socialAction() {
 
-        return view('site_pages.mandated_programs.social_action');
+        $pageTitle = "Social Action";
+        $breadCrumbs = "Mandated Programs/Social Action";
+        return view('site_pages.mandated_programs.social_action', compact('pageTitle', 'breadCrumbs'));
 
     }
 
     public function aboutgaFounders() {
 
-        return view('site_pages.about_ga.founders');
+        $pageTitle = "The Founders";
+        $breadCrumbs = "About GA/Founders";
+        return view('site_pages.about_ga.founders', compact('pageTitle', 'breadCrumbs'));
 
     }
 }
