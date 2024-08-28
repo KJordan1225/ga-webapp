@@ -13,4 +13,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Routes for site pages
 Route::get('/mandated_programs/achievement_week', [App\Http\Controllers\SitePagesController::class, 'achievementWeek'])->name('achievementWeek');
+Route::get('/mandated_programs/talent_hunt', [App\Http\Controllers\SitePagesController::class, 'talentHunt'])->name('talentHunt');
+Route::get('/mandated_programs/stem_program', [App\Http\Controllers\SitePagesController::class, 'stemProgram'])->name('stemProgram');
+Route::get('/mandated_programs/fatherhood_mentoring', [App\Http\Controllers\SitePagesController::class, 'fatherhoodMentoring'])->name('fatherhoodMentoring');
+Route::get('/mandated_programs/social_action', [App\Http\Controllers\SitePagesController::class, 'socialAction'])->name('socialAction');
+
+
 

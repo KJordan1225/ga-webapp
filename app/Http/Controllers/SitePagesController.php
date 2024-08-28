@@ -11,4 +11,22 @@ class SitePagesController extends Controller
         return view('site_pages.mandated_programs.achievement_week');
 
     }
+
+    public function talentHunt() {
+
+        return view('site_pages.mandated_programs.talent_hunt');
+
+    }
+
+    public function stemProgram() {
+
+        return view('site_pages.mandated_programs.stem_program');
+
+    }
+
+    public function fatherhoodMentoring() {
+
+        return view('site_pages.mandated_programs.fatherhood_mentoring');
+
+    }
 }
