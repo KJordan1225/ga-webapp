@@ -21,4 +21,8 @@ Route::get('/mandated_programs/social_action', [App\Http\Controllers\SitePagesCo
 Route::get('/about_ga/founders', [App\Http\Controllers\SitePagesController::class, 'aboutgaFounders'])->name('aboutgaFounders');
 
 
+//Routes for profile
+Route::any('/profiles/create', [App\Http\Controllers\ProfileController::class, 'createProfile' ])->name('createProfile');
+
+
 

@@ -206,7 +206,7 @@
                                                                 <li><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
                                                                     @if(null == (auth()->user()->profile))
                                                                         <ul>
-                                                                            <li><a href="javascript:void(0);">Create Profile</a></li>					
+                                                                            <li><a href="profiles/create">Create Profile</a></li>					
                                                                         </ul>
                                                                     @else
                                                                         <ul class="sub-menu">

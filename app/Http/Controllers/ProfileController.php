@@ -17,9 +17,11 @@ class ProfileController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function createProfile()
     {
-        //
+        $pageTitle = "Create Directory Profile";
+        $breadCrumbs = "profiles/create";
+        return view('profiles.create',compact('pageTitle', 'breadCrumbs'));
     }
 
     /**
