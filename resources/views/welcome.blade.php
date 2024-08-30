@@ -214,8 +214,7 @@
                                                                             <li class="wt-newnoti"><a href="javascript:void(0);">Edit Profile</a></li>
                                                                         </ul>
                                                                     @endif
-                                                                </li>
-                                                                
+                                                                </li>                                                                
                                                             </ul>
                                                         </li>
 														<li>

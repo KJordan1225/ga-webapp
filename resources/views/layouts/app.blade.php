@@ -193,70 +193,23 @@
 														</a>
 														</li>
 
-														<!-- <li class="menu-item-has-children page_item_has_children">
-															<a href="javascript:void(0);">
-																<span>Insights</span>
-															</a>
-															<ul class="sub-menu children">
-																<li><a href="dashboard-insights.html">Insights</a></li>
-																<li><a href="dashboard-insightsuser.html">Insights User</a></li>
-															</ul>
-														</li> -->
-														<li>
-															<a href="dashboard-profile.html">
-																<span>My Profile</span>
-															</a>
-														</li>
-														<!-- <li class="menu-item-has-children">
-															<a href="javascript:void(0);">
-																<span>All Jobs</span>
-															</a>
-															<ul class="sub-menu">
-																<li><a href="dashboard-completejobs.html">Completed Jobs</a></li>
-																<li><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
-																<li><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
-																<li><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
-															</ul>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-managejobs.html">
-																<span>Manage Jobs</span>
-															</a>
-														</li> -->
-														<!-- <li class="wt-notificationicon menu-item-has-children">
-															<a href="javascript:void(0);">
-																<span>Messages</span>
-															</a>
-															<ul class="sub-menu">
-																<li><a href="dashboard-messages.html">Messages</a></li>
-																<li><a href="dashboard-messages2.html">Messages V 2</a></li>
-															</ul>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-saveitems.html">
-																<span>My Saved Items</span>
-															</a>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-invocies.html">
-																<span>Invoices</span>
-															</a>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-category.html">
-																<span>Category</span>
-															</a>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-packages.html">
-																<span>Packages</span>
-															</a>
-														</li> -->
-														<!-- <li>
-															<a href="dashboard-proposals.html">
-																<span>Proposals</span>
-															</a>
-														</li> -->
+														<li class="menu-item-has-children">
+                                                            <a href="javascript:void(0);">My Profile</a>
+                                                            <ul class="sub-menu">
+                                                                <li><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
+                                                                    @if(null == (auth()->user()->profile))
+                                                                        <ul>
+                                                                            <li><a href="profiles/create">Create Profile</a></li>					
+                                                                        </ul>
+                                                                    @else
+                                                                        <ul>
+                                                                            <li><a href="javascript:void(0);">View Profile</a></li>
+                                                                            <li><a href="javascript:void(0);">Edit Profile</a></li>
+                                                                        </ul>
+                                                                    @endif
+                                                                </li>                                                                
+                                                            </ul>
+                                                        </li>														
 														<li>
 															<a href="dashboard-accountsettings.html">
 																<span>Account Settings</span>
