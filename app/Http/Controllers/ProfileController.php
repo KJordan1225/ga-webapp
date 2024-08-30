@@ -42,9 +42,8 @@ class ProfileController extends Controller
             'telephone' => 'nullable',
             'telephone_type' => 'nullable',
             'email' => 'required|email|unique:users',
-            'dob' => 'date',
-            'queversary' => 'date', 
-            'user_id' => 'required|unique:users',           
+            'dob' => 'nullable',
+            'queversary' => 'nullable',          
         ]);
         
         $profile = new Profile();
@@ -58,8 +57,8 @@ class ProfileController extends Controller
         $profile->telephone = $validatedData['telephone'];
         $profile->telephone_type = $validatedData['telephone_type'];
         $profile->email = $validatedData['email'];
-        $profile->dob = date('Y-m-d H:i:s');
-        $profile->queversary = date('Y-m-d H:i:s');
+        $profile->dob = $validatedData['dob'];
+        $profile->queversary = $validatedData['queversary'];
         $profile->user_id = Auth::id();
         $profile->save();
         

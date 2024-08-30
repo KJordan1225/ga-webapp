@@ -23,8 +23,8 @@ return new class extends Migration
             $table->string('telephone')->nullable();
             $table->string('telephone_type')->nullable();
             $table->string('email')->nullable();
-            $table->timestamp('dob')->nullable();
-            $table->timestamp('queversary')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('queversary')->nullable();
             $table->foreignId('user_id')
                 ->references('id')
                 ->on('users')

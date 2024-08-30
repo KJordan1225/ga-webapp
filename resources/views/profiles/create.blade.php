@@ -2,27 +2,27 @@
 
 @section('content')
 
-<!-- Display Success Message -->
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-<!-- Display Error Messages -->
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 <div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10">
 				<div class="card">
+                    <!-- Display Success Message -->
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    <!-- Display Error Messages -->
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card-header text-center" >
                         <h2 style="background-color: #4B006E; color: #CFB53B;">
                             {{ __('Profile Create Form') }}
@@ -33,7 +33,7 @@
 							<div class="alert alert-success" role="alert">
 								{{ session('status') }}
 							</div>
-						@endifz
+						@endif
 
 						<form action="{{ route('storeProfile') }}" method="POST"> 
 						@csrf
