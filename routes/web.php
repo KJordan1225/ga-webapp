@@ -23,6 +23,7 @@ Route::get('/about_ga/founders', [App\Http\Controllers\SitePagesController::clas
 
 //Routes for profile
 Route::any('/profiles/create', [App\Http\Controllers\ProfileController::class, 'createProfile' ])->name('createProfile');
+Route::post('/profiles/create', [App\Http\Controllers\ProfileController::class, 'store' ])->name('storeProfile');
 
 
 

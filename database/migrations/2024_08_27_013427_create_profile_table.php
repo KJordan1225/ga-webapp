@@ -13,10 +13,21 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('profile_title');
-            $table->mediumtext('profile_summary');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('street1')->nullable();
+            $table->string('street2')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->default('VA');
+            $table->string('zip_code')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('telephone_type')->nullable();
+            $table->string('email')->nullable();
+            $table->timestamp('dob')->nullable();
+            $table->timestamp('queversary')->nullable();
             $table->foreignId('user_id')
+                ->references('id')
+                ->on('users')
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('cascade');

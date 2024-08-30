@@ -17,7 +17,7 @@
 							</div>
 						@endif
 
-						<form action="{{ route('createProfile') }}" method="POST"> 
+						<form action="{{ route('storeProfile') }}" method="POST"> 
 						@csrf
 						
 							<!-- First Name Textfield -->
