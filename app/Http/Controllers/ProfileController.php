@@ -102,4 +102,12 @@ class ProfileController extends Controller
     {
         //
     }
+
+    public function viewSingle($myProfileID)
+    {
+        $pageTitle = "View Profile";
+        $breadCrumbs = "profiles/viewSingle";
+        $myProfile = Profile::findOrFail($myProfileID);
+        return view('profiles.viewSingle', compact('pageTitle', 'breadCrumbs', 'myProfile'));
+    }
 }

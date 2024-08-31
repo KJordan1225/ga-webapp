@@ -210,7 +210,7 @@
                                                                         </ul>
                                                                     @else
                                                                         <ul class="sub-menu">
-                                                                            <li class="wt-newnoti"><a href="javascript:void(0);">View Profile</a></li>
+                                                                            <li class="wt-newnoti"><a href="route('viewSingleProfile')">View Profile</a></li>
                                                                             <li class="wt-newnoti"><a href="javascript:void(0);">Edit Profile</a></li>
                                                                         </ul>
                                                                     @endif

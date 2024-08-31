@@ -5,7 +5,7 @@
 <div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10">
-				<div class="card">
+				<div class="card">					
                     <!-- Display Success Message -->
                     @if (session('success'))
                         <div class="alert alert-success">

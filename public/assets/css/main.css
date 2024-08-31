@@ -5143,4 +5143,22 @@ body.wt-login .wt-userlogedin{display: block;}
     margin: 0;
 }
 
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border: 1px solid #ddd;
+	width: 50%; /* Adjustable width */
+}
+
+th.resizable, td.resizable {
+	resize: horizontal;
+	overflow: auto;
+	width: auto;
+}
+
 [v-cloak] { display:none; }
