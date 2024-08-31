@@ -42,7 +42,7 @@
 							<div class="form-group">
 								<label for="firstname">First Name</label>
 								<input type="text" class="form-control" id="firstname" name="firstname" 
-									value="">
+									value="{{ old('firstname') }}">
 							</div>
 							@error('firstname')
 								<div class="error">{{ $message }}</div>
@@ -52,7 +52,7 @@
 							<div class="form-group">
 								<label for="lastname">Last Name</label>
 								<input type="text" class="form-control" id="lastname" name="lastname" 
-									value="">
+									value="{{ old('lastname') }}">
 							</div>
 							@error('lastname')
 								<div class="error">{{ $message }}</div>
@@ -62,7 +62,7 @@
 							<div class="form-group">
 								<label for="street1">Street 1</label>
 								<input type="text" class="form-control" id="street1" name="street1" 
-									value="">
+									value="{{ old('street1') }}">
 							</div>
 							@error('street1')
 								<div class="error">{{ $message }}</div>
@@ -72,7 +72,7 @@
 							<div class="form-group">
 								<label for="street2">Street 2</label>
 								<input type="text" class="form-control" id="street2" name="street2" 
-									value="">
+									value="{{ old('street2') }}">
 							</div>
 							@error('street2')
 								<div class="error">{{ $message }}</div>
@@ -82,7 +82,7 @@
 							<div class="form-group">
 								<label for="city">City</label>
 								<input type="text" class="form-control" id="city" name="city" 
-									value="">
+									value="{{ old('city') }}">
 							</div>
 							@error('city')
 								<div class="error">{{ $message }}</div>
@@ -153,7 +153,7 @@
 							<div class="form-group">
 								<label for="zip_code">Zip Code</label>
 								<input type="text" class="form-control" id="zip_code" name="zip_code" 
-									value="">
+									value="{{ old('zip_code') }}">
 							</div>
 							@error('zip_code')
 								<div class="error">{{ $message }}</div>
@@ -163,7 +163,7 @@
 							<div class="form-group">
 								<label for="telephone">Telephone</label>
 								<input type="text" class="form-control" id="telephone" name="telephone" 
-									value="" placeholder="ex. ###-###-####">
+									value="{{ old('telephone') }}" placeholder="ex. ###-###-####">
 							</div>
 							@error('telephone')
 								<div class="error">{{ $message }}</div>
@@ -180,12 +180,16 @@
 							@error('telephone_type')
 								<div class="error">{{ $message }}</div>
 							@enderror
+
+							@php 
+								$thisUser = auth()->user();
+							@endphp
 							
 							<!-- Email Textfield -->
 							<div class="form-group">
 								<label for="email">Email</label>								
 								<input type="text" class="form-control" id="email" name="email" 
-									value="">
+									value="{{ $thisUser->email }}">
 							</div>
 							@error('email')
 								<div class="error">{{ $message }}</div>
@@ -195,7 +199,7 @@
 							<div class="form-group">
 								<label for="email">Birthdate</label>								
 								<input type="text" class="form-control" id="dob" name="dob" 
-									value="">
+									value="{{ old('dob') }}">
 							</div>
 							@error('dob')
 								<div class="error">{{ $message }}</div>
@@ -205,7 +209,7 @@
 							<div class="form-group">
 								<label for="queversary">Queversary</label>								
 								<input type="text" class="form-control" id="queversary" name="queversary" 
-									value="">
+									value="{{ old('queversary') }}">
 							</div>
 							@error('queversary')
 								<div class="error">{{ $message }}</div>
