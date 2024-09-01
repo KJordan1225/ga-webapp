@@ -134,4 +134,12 @@ class ProfileController extends Controller
         $myProfile = Profile::findOrFail($myProfileID);
         return view('profiles.viewSingle', compact('pageTitle', 'breadCrumbs', 'myProfile'));
     }
+
+    public function viewDirectory()
+    {
+        $pageTitle = "View/Print Directory";
+        $breadCrumbs = "profiles/viewDirectory";
+        $myProfiles = Profile::orderBy('lastname', 'asc')->orderBy('firstname', 'ASC')->get();
+        return view('profiles.viewDirectory', compact('pageTitle', 'breadCrumbs', 'myProfiles'));
+    }
 }

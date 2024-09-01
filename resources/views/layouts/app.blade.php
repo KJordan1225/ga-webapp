@@ -207,13 +207,14 @@
 																			$myProfileID = strval($myProfile->id);
 																		@endphp
                                                                         <ul>
-                                                                            <li><a href="viewSingle/{{ $myProfileID }}">View Profile</a></li>
-                                                                            <li><a href="edit/{{ $myProfileID }}">Edit Profile</a></li>
+                                                                            <li><a href="{{ url('profiles/viewSingle/'.$myProfileID) }}">View Profile</a></li>
+                                                                            <li><a href="{{ url('profiles/edit/'.$myProfileID) }}">Edit Profile</a></li>
                                                                         </ul>
                                                                     @endif
                                                                 </li>                                                                
                                                             </ul>
-                                                        </li>														
+                                                        </li>
+														<li><a href="{{ url('profiles/viewDirectory') }}">View/Print Directory</a></li>														
 														<li>
 															<a href="dashboard-accountsettings.html">
 																<span>Account Settings</span>
