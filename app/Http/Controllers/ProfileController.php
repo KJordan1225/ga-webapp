@@ -41,7 +41,7 @@ class ProfileController extends Controller
             'zip_code' => 'nullable',
             'telephone' => 'nullable',
             'telephone_type' => 'nullable',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'dob' => 'nullable',
             'queversary' => 'nullable',          
         ]);
@@ -56,7 +56,7 @@ class ProfileController extends Controller
         $profile->zip_code = $validatedData['zip_code'];
         $profile->telephone = $validatedData['telephone'];
         $profile->telephone_type = $validatedData['telephone_type'];
-        $profile->email = $validatedData['email'];
+        // $profile->email = $validatedData['email'];
         $profile->dob = $validatedData['dob'];
         $profile->queversary = $validatedData['queversary'];
         $profile->user_id = Auth::id();
@@ -82,18 +82,42 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($myProfileID)
     {
-        //
+        $pageTitle = "Edit Profile";
+        $breadCrumbs = "profiles/edit";
+        $myProfile = Profile::findOrFail($myProfileID);
+        return view('profiles.edit', compact('pageTitle', 'breadCrumbs', 'myProfile'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    public function update(Request $request, $id)
+	{
+		$myProfile = Profile::findOrFail($id);
+		$myProfile->firstname = $request->input('firstname');
+		$myProfile->lastname = $request->input('lastname');
+		$myProfile->street1 = $request->input('street1');
+		$myProfile->street2 = $request->input('street2');
+		$myProfile->city = $request->input('city');
+		$myProfile->state = $request->input('state');
+		$myProfile->zip_code = $request->input('zip_code');
+		$myProfile->telephone = $request->input('telephone');
+		$myProfile->telephone_type = $request->input('telephone_type');
+		$myProfile->email = $request->input('email');
+		$myProfile->dob = $request->input('dob');
+		$myProfile->queversary = $request->input('queversary');
+		$myProfile->user_id = Auth::id();		
+		$myProfile->save();
+		
+		$pageTitle = "Edit Profile";
+        $breadCrumbs = "profiles/edit";
+        return redirect()->back()->with('success', 'Profile updated successfully!')
+                                    ->with('pageTitle', $pageTitle)
+                                    ->with('breadCrumbs', $breadCrumbs)
+									->with('myProfile', $myProfile);
+	}
 
     /**
      * Remove the specified resource from storage.

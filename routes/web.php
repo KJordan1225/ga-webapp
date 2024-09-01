@@ -25,6 +25,8 @@ Route::get('/about_ga/founders', [App\Http\Controllers\SitePagesController::clas
 Route::any('/profiles/create', [App\Http\Controllers\ProfileController::class, 'createProfile' ])->name('createProfile');
 Route::post('/profiles/create', [App\Http\Controllers\ProfileController::class, 'store' ])->name('storeProfile');
 Route::get('/profiles/viewSingle/{id}', [App\Http\Controllers\ProfileController::class, 'viewSingle'])->name('viewSingleProfile');
+Route::get('/profiles/edit/{id}', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profileEdit');
+Route::put('/profiles/edit/{id}', [App\Http\Controllers\ProfileController::class, 'update' ])->name('updateProfile');
 
 
 

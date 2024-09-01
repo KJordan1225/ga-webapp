@@ -45,7 +45,7 @@
 									value="{{ old('firstname') }}">
 							</div>
 							@error('firstname')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Last Name Textfield -->
@@ -55,7 +55,7 @@
 									value="{{ old('lastname') }}">
 							</div>
 							@error('lastname')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror							
 							
 							<!-- Street1 Textfield -->
@@ -65,7 +65,7 @@
 									value="{{ old('street1') }}">
 							</div>
 							@error('street1')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Street2 Textfield -->
@@ -75,7 +75,7 @@
 									value="{{ old('street2') }}">
 							</div>
 							@error('street2')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- City Textfield -->
@@ -85,7 +85,7 @@
 									value="{{ old('city') }}">
 							</div>
 							@error('city')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- State Textfield -->
@@ -146,7 +146,7 @@
 								</select>
 							</div>
 							@error('state')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Zip Code Textfield -->
@@ -156,7 +156,7 @@
 									value="{{ old('zip_code') }}">
 							</div>
 							@error('zip_code')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Telephone Textfield -->
@@ -166,7 +166,7 @@
 									value="{{ old('telephone') }}" placeholder="ex. ###-###-####">
 							</div>
 							@error('telephone')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Telephone Type Textfield -->
@@ -178,7 +178,7 @@
 								</select>
 							</div>
 							@error('telephone_type')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 
 							@php 
@@ -192,7 +192,7 @@
 									value="{{ $thisUser->email }}">
 							</div>
 							@error('email')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- DOB Textfield -->
@@ -202,7 +202,7 @@
 									value="{{ old('dob') }}">
 							</div>
 							@error('dob')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Queversary Textfield -->
@@ -212,7 +212,7 @@
 									value="{{ old('queversary') }}">
 							</div>
 							@error('queversary')
-								<div class="error">{{ $message }}</div>
+								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 						
 							<!-- Submit Button -->

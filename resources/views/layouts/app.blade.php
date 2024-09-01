@@ -208,7 +208,7 @@
 																		@endphp
                                                                         <ul>
                                                                             <li><a href="viewSingle/{{ $myProfileID }}">View Profile</a></li>
-                                                                            <li><a href="javascript:void(0);">Edit Profile</a></li>
+                                                                            <li><a href="edit/{{ $myProfileID }}">Edit Profile</a></li>
                                                                         </ul>
                                                                     @endif
                                                                 </li>                                                                
