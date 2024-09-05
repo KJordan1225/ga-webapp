@@ -11,13 +11,7 @@ class Profile extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'image',
-        'profile_title',
-        'profile_summary',
-        'user_id',       
-    ];
+    protected $guarded = [];
 
     public $timestamps = true;
 
