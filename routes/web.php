@@ -31,4 +31,10 @@ Route::put('/profiles/edit/{id}', [App\Http\Controllers\ProfileController::class
 Route::get('/profiles/viewDirectory', [App\Http\Controllers\ProfileController::class, 'viewDirectory'])->name('viewDirectory');
 
 
+//Routes for PDFController
+Route::get('/pdf/create', [App\Http\Controllers\PDFController::class, 'create'])->name('pdf.create');
+Route::post('/pdf/strore', [App\Http\Controllers\PDFController::class, 'store'])->name('pdf.store');
+Route::get('/directoryPDF', [App\Http\Controllers\PDFController::class, 'index'])->name('directoryPDF.index');
+Route::get('/directoryPDF/download', [App\Http\Controllers\PDFController::class, 'downloadDirectory'])->name('directory.download');
+
 

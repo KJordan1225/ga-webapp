@@ -28,6 +28,9 @@
                             {{ __('View/Print Chapter Directory') }}
                         </h2>
                     </div>
+                    </br></br>
+                    <a href="{{ route('directory.download') }}" class="p-2 btn btn-primary btn-lg">Download PDF</a>
+                    </br></br>
                     <div class="card-body">
                     @foreach ($myProfiles as $profileItem)
                         <div class="form-group">
