@@ -11,6 +11,7 @@
 	<title>Gamma Alpha Chapter of Omega Psi Phi Fraternity, Inc.</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css') }}">
@@ -423,6 +424,7 @@
 	<script src="{{asset('assets/js/tipso.js') }}"></script>
 	<script src="{{asset('assets/js/jRate.js') }}"></script>
 	<script src="{{asset('assets/js/main.js') }}"></script>
+
 </body>
 
 

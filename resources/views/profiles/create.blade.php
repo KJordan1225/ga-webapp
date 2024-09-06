@@ -197,20 +197,30 @@
 							
 							<!-- DOB Textfield -->
 							<div class="form-group">
-								<label for="email">Birthdate</label>								
-								<input type="text" class="form-control" id="dob" name="dob" 
-									value="{{ old('dob') }}">
-							</div>
+                                <label for="email">Birthdate</label>
+                                <input type="text" class="date form-control" id="dob" name="dob"
+                                    value="{{ old('dob') }}">
+                            </div>
+                            <script type="text/javascript">  
+                                $('.date').datepicker({    
+                                format: dd-mm-yyyy 
+                                });    
+                            </script>
 							@error('dob')
 								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
 							
 							<!-- Queversary Textfield -->
 							<div class="form-group">
-								<label for="queversary">Queversary</label>								
-								<input type="text" class="form-control" id="queversary" name="queversary" 
-									value="{{ old('queversary') }}">
-							</div>
+                                <label for="queversary">Queversary</label>								
+                                <input type="text" class="date form-control" id="queversary" name="queversary"
+                                    value="{{ old('queversary') }}">
+                            </div>
+                            <script type="text/javascript">  
+                                $('.date').datepicker({    
+                                format: dd-mm-yyyy 
+                                });    
+                            </script>
 							@error('queversary')
 								<div class="error" style="color: red">{{ $message }}</div>
 							@enderror
