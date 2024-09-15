@@ -120,26 +120,8 @@ class ProfileResource extends Resource
                 Tables\Columns\TextColumn::make('firstname')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('lastname')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('street1')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('street2')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('city')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('state')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('zip_code')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('telephone')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('telephone_type')
-                    ->searchable(),
+                    ->searchable(),                
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('dob')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('queversary')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
@@ -159,6 +141,7 @@ class ProfileResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
